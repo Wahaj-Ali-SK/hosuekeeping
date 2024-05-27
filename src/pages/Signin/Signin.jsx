@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Signup from "../Signup/Signup";
 
 const Signin = () => {
   return (
@@ -45,7 +47,7 @@ const Signin = () => {
           <button className="bg-black text-white p-3">Facebook</button>
         </div>
 
-        <p className="text-center w-full mt-4">Create an account</p>
+        <Link to="/signup" className="text-center w-full mt-4">Create an account</Link>
       </div>
     </div>
   );
