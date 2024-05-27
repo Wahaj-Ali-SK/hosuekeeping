@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Signup from "./components/Signup/Signup";
-import Signin from "./components/Signin/Signin";
+import Signin from "./pages/Signin/Signin";
+import Signup from "./pages/Signup/Signup";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Signin />} />
-          {/* <Route path="/our-subscription-box" element={<SubscriptionBox />} />
+          <Route path="/signup" element={<Signup />} />
+          {/* 
           <Route path="/the-magazine" element={<TheMagazine />} />
           <Route path="/merchandise" element={<Merchandise />} /> */}
         </Routes>
