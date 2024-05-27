@@ -38,7 +38,7 @@ const Signin = () => {
 
         <div class="flex items-center justify-center w-full">
           <div class="border-b border-gray-500 w-full mr-4"></div>
-          <p class="text-center">OR</p>
+          <p class="text-center my-2">OR</p>
           <div class="border-b border-gray-500 w-full ml-4"></div>
         </div>
 
