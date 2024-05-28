@@ -22,6 +22,11 @@ const Navbar = ({ currentPage }) => {
               <IoMdArrowRoundBack size={25} color="#ffe4c4"/>
             </Link>
           )}
+          {currentPage === "condo-details" && (
+            <Link to="/add-details" className="flex items-center">
+              <IoMdArrowRoundBack size={25} color="#ffe4c4"/>
+            </Link>
+          )}
         </div>
         <h1 className="justify-self-center col-span-3	text-2xl font-bold">
           Condocare
