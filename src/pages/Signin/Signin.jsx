@@ -19,7 +19,7 @@ const Signin = () => {
         Sign In To Manage Your Tasks
       </h1>
       <div className="flex flex-col items-start">
-        <form className="flex flex-col w-full" action="/action_page.php">
+        <form className="flex flex-col w-full" action="">
           <div className="flex flex-col mb-4">
             <label for="email">Email:</label>
             <input
