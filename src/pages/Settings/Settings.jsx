@@ -20,7 +20,7 @@ const Settings = () => {
       <div className="flex flex-col py-2 px-8 absolute mt-[100px] w-full">
         <Link
           to="/profile"
-          className="flex justify-between items-center border-2 border-black p-4"
+          className="flex justify-between items-center border-2 border-black p-4 rounded-md bg-input-bg"
         >
           <div className="flex gap-2 items-center">
             <div className="border-2 border-black rounded-[50%] p-2">
@@ -34,7 +34,7 @@ const Settings = () => {
         <div className="flex flex-col mt-4">
           <Link
             to="/profile"
-            className="flex justify-between items-center border-2 border-black p-4"
+            className="flex justify-between items-center border-2 border-black p-4 rounded-t-md bg-input-bg"
           >
             <div className="flex items-center">
               <h2 className="text-lg">See Schedule</h2>
@@ -44,7 +44,7 @@ const Settings = () => {
 
           <Link
             to="/profile"
-            className="flex justify-between items-center border-2 border-black p-4"
+            className="flex justify-between items-center border-2 border-black p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <h2 className="text-lg">My Condos</h2>
@@ -54,7 +54,7 @@ const Settings = () => {
 
           <Link
             to="/profile"
-            className="flex justify-between items-center border-2 border-black p-4"
+            className="flex justify-between items-center border-2 border-black p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <h2 className="text-lg">Help</h2>
@@ -64,7 +64,7 @@ const Settings = () => {
 
           <Link
             to="/profile"
-            className="flex justify-between items-center border-2 border-black p-4"
+            className="flex justify-between items-center border-2 border-black p-4 rounded-b-md bg-input-bg"
           >
             <div className="flex items-center">
               <h2 className="text-lg">Privacy Policy</h2>
@@ -73,7 +73,7 @@ const Settings = () => {
           </Link>
         </div>
         <button
-          className="bg-black text-white p-3 w-full mt-4 font-bold"
+          className="bg-button text-white p-3 w-full mt-4 font-bold rounded-md"
           onClick={handleSignOut}
         >
           Sign Out
