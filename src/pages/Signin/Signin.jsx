@@ -72,9 +72,9 @@ const Signin = () => {
           </button>
         </div>
 
-        <Link to="/signup" className="text-center w-full mt-4">
-          Create an account
-        </Link>
+        <span className="text-center w-full mt-4 font-[400] text-gray-500">
+          Haven't signed up yet? <Link to="/signup" className="text-blue-500 font-[600]">Create an account</Link>
+        </span>
       </div>
     </div>
   );
