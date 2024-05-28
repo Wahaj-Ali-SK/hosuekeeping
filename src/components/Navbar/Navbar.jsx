@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ currentPage }) => {
   return (
     <>
-      <div className="grid grid-cols-5 border-b-2 border-black py-4 px-2 fixed w-full z-50 bg-button text-[#ffe4c4]">
+      <div className="grid grid-cols-5 border-b-2 border-black py-4 px-2 fixed w-full z-50 bg-button text-white">
         <div className="self-center">
           {currentPage === "signup" && (
             <Link to="/" className="flex items-center">
