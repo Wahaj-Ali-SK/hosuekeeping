@@ -34,7 +34,7 @@ const Signup = () => {
             placeholder="Email"
           />
           
-          <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg rounded-md">
+          <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg rounded-md mb-2">
             <input
               className="h-12 w-full bg-input-bg px-2 rounded-md"
               type={showPassword ? "text" : "password"}
@@ -75,7 +75,7 @@ const Signup = () => {
               />
             )}
           </div>
-          <button className="bg-blue-700 text-white p-3 rounded-md w-full mt-2">
+          <button className="bg-button text-white p-3 rounded-md w-full mt-2">
             Sign Up
           </button>
         </form>
