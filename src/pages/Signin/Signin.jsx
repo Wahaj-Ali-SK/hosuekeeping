@@ -50,7 +50,7 @@ const Signin = () => {
 
           <p className="text-right mb-2 font-[600]">Forgot Password?</p>
 
-          <button className="bg-blue-700 text-white p-3 rounded-md">Log In</button>
+          <button className="bg-button text-white p-3 rounded-md">Log In</button>
 
           
         </form>
