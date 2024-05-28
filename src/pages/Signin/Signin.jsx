@@ -21,7 +21,7 @@ const Signin = () => {
       <div className="flex flex-col items-start">
         <form className="flex flex-col w-full" action="/action_page.php">
           <div className="flex flex-col mb-4">
-            <label for="fname">Email:</label>
+            <label for="email">Email:</label>
             <input
               className="border-gray-400 border-2 h-12 px-2 rounded-md bg-input-bg"
               type="email"
