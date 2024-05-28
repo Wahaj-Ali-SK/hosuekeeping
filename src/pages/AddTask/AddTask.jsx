@@ -122,7 +122,7 @@ const AddTask = () => {
           </label>
 
           <textarea
-            className="border-black border-2 p-2"
+            className="border-black border-2 p-2 w-full"
             id="w3review"
             name="w3review"
             rows="4"
