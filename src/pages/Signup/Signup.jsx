@@ -75,7 +75,7 @@ const Signup = () => {
               />
             )}
           </div>
-          <button className="bg-button text-white p-3 rounded-md w-full mt-2">
+          <button className="bg-button text-white p-3 rounded-md w-full mt-6">
             Sign Up
           </button>
         </form>
