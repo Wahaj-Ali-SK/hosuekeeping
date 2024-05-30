@@ -25,18 +25,18 @@ const Signup = () => {
         <form action="submit" className="mt-2">
           <input
             type="text"
-            className="border-gray-400 border-2 rounded-md bg-input-bg h-12 px-2 mb-2 w-full"
+            className="border-gray-400 border-2 bg-input-bg h-12 px-2 mb-2 w-full"
             placeholder="Name"
           />
           <input
             type="email"
-            className="border-gray-400 border-2 rounded-md bg-input-bg h-12 px-2 mb-2 w-full"
+            className="border-gray-400 border-2 bg-input-bg h-12 px-2 mb-2 w-full"
             placeholder="Email"
           />
           
-          <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg rounded-md mb-2">
+          <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg mb-2">
             <input
-              className="h-12 w-full bg-input-bg px-2 rounded-md"
+              className="h-12 w-full bg-input-bg px-2 "
               type={showPassword ? "text" : "password"}
               id="password"
               name="password"
@@ -55,9 +55,9 @@ const Signup = () => {
             )}
           </div>
 
-          <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg rounded-md">
+          <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg ">
             <input
-              className="h-12 w-full bg-input-bg px-2 rounded-md"
+              className="h-12 w-full bg-input-bg px-2 "
               type={showConfirmPassword ? "text" : "password"}
               id="confirm_password"
               name="password"
