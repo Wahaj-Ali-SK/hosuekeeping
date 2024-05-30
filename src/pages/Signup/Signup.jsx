@@ -82,7 +82,7 @@ const Signup = () => {
 
         <span className="text-center w-full mt-4 font-[400] text-gray-500">
           Already have an account?{" "}
-          <Link to="/" className="text-blue-500 font-[600]">
+          <Link to="/login" className="text-blue-500 font-[600]">
             Sign In
           </Link>
         </span>
