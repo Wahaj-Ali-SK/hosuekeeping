@@ -27,7 +27,7 @@ module.exports = withMT({
     extend: {
       colors: {
         'input-bg': '#d8e5f9',
-        'button': '#483d8b',
+        'button': '#000',
       },
     },
   },
