@@ -33,7 +33,7 @@ const Navbar = ({ currentPage }) => {
           Condocare
         </h1>
         <div className="self-center flex justify-end">
-          {currentPage === "home" && (
+          {(currentPage === "home" || currentPage === "add-task") && (
             <Link to="/settings" className="flex items-center">
               <IoIosSettings size={25} color="#ffe4c4" />
             </Link>
