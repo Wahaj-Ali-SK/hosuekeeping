@@ -18,8 +18,8 @@ const Home = () => {
   return (
     <>
       <Navbar currentPage="home" />
-      <div className='bg-gradient-to-r from-blue-300 to-indigo-200 w-full h-[100px] absolute mt-16 px-4 flex justify-center items-center text-center'>
-        <h2 className='text-2xl mt-2 font-[600] text-gray-200'>Welcome back, User</h2>
+      <div className='bg-gradient-to-r from-[#858b8f] to-[#000000] w-full h-[100px] absolute mt-16 px-4 flex justify-center items-center text-center'>
+        <h2 className='text-2xl mt-2 font-[600] text-gray-200'>Welcome back, <span className='text-[#ffe4c4]'>User</span></h2>
       </div>
       <div className='flex flex-col py-2 px-8 absolute mt-[180px] w-full'>
 
