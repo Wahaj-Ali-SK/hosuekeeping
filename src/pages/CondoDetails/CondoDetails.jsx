@@ -18,16 +18,6 @@ const CondoDetails = () => {
   const [balcony, setBalcony] = useState(true);
   const [pets, setPets] = useState(true);
 
-  const handleBalconyChange = () => {
-    setBalcony(!balcony);
-    console.log(balcony, "balcony state");
-  };
-
-  const handlePetsChange = () => {
-    setPets(!pets);
-    console.log(pets, "pets state");
-  };
-
   const handleToggleChange = (state, setState, label) => {
     setState(!state);
     console.log(state, label, "state");
@@ -55,7 +45,7 @@ const CondoDetails = () => {
         <h2 className="text-lg font-[600]">Condo Details</h2>
 
         <div className="flex flex-col mt-2 h-full">
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 rounded-t-md bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0 bg-input-bg p-2">
             <p>Number of Bedrooms</p>
             <div className="flex items-center">
               <button
@@ -79,7 +69,7 @@ const CondoDetails = () => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0  bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0  bg-input-bg p-2">
             <p>Number of Half Bathrooms</p>
             <div className="flex items-center">
               <button
@@ -103,7 +93,7 @@ const CondoDetails = () => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0  bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0  bg-input-bg p-2">
             <p>Number of Full Bathrooms</p>
             <div className="flex items-center">
               <button
@@ -127,17 +117,17 @@ const CondoDetails = () => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0 bg-input-bg p-2">
             <p>Balcony</p>
             <Checkbox checked={!balcony} onChange={() => handleToggleChange(balcony, setBalcony, "balcony")} />
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0 bg-input-bg p-2">
             <p>Pets?</p>
             <Checkbox checked={!pets} onChange={() => handleToggleChange(pets, setPets, "pets")} />
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0 bg-input-bg p-2">
             <p>Number of Occupants</p>
             <div className="flex items-center">
               <button
@@ -161,7 +151,7 @@ const CondoDetails = () => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 border-b-0  bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 border-b-0  bg-input-bg p-2">
             <label for="buzzerCode">Buzzer Code:</label>
             <input
               className="border-gray-400 border-2 h-12 px-2 rounded-md bg-white"
@@ -172,7 +162,7 @@ const CondoDetails = () => {
             />
           </div>
 
-          <div className="flex justify-between items-center border-gray-400 border-2 rounded-b-md  bg-input-bg p-2">
+          <div className="flex justify-between items-center border-gray-300 border-2 bg-input-bg p-2">
             <label for="keyLocation">Key Location:</label>
             <input
               className="border-gray-400 border-2 h-12 px-2 rounded-md bg-white"
@@ -190,7 +180,7 @@ const CondoDetails = () => {
           </label>
 
           <textarea
-            className="border-gray-400 border-2 rounded-md p-2 w-full"
+            className="border-gray-400 border-2 p-2 w-full"
             id="w3review"
             name="w3review"
             rows="4"
