@@ -62,11 +62,11 @@ const Signin = () => {
         </div>
 
         <div className="flex flex-col w-full gap-5">
-          <button className="flex bg-white text-zinc-500	 p-1 items-center justify-start pl-16 gap-4 border-slate-300 border-2 rounded-md text-lg font-[600]">
+          <button className="flex bg-white text-zinc-500 p-1 items-center justify-center gap-4 border-slate-300 border-2 rounded-md text-lg font-[600]">
             <img src={google} alt="google" className="w-[35px]"/>
             Continue with Google
           </button>
-          <button className="flex bg-white text-zinc-500	 p-1 items-center justify-start pl-16 gap-4 border-slate-300 border-2 rounded-md text-lg font-[600]">
+          <button className="flex bg-white text-zinc-500	 p-1 items-center justify-center gap-4 border-slate-300 border-2 rounded-md text-lg font-[600]">
             <img src={fb} alt="google" className="w-[35px]"/>
             Continue with Facebook
           </button>
