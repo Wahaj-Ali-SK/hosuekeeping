@@ -18,7 +18,7 @@ const Navbar = ({ currentPage }) => {
               <IoMdArrowRoundBack size={25} color="#ffe4c4" />
             </Link>
           )}
-          {currentPage === "add-details" && (
+          {(currentPage === "add-details" || currentPage === "today's-tasks") && (
             <Link to="/" className="flex items-center">
               <IoMdArrowRoundBack size={25} color="#ffe4c4" />
             </Link>
