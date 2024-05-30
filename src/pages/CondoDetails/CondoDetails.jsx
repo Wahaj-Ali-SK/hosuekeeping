@@ -28,6 +28,11 @@ const CondoDetails = () => {
     console.log(pets, "pets state");
   };
 
+  const handleToggleChange = (state, setState, label) => {
+    setState(!state);
+    console.log(state, label, "state");
+  };
+
   const handleInputChange = (e, setValue) => {
     const newValue = parseInt(e.target.value);
     if (!isNaN(newValue)) {
@@ -124,12 +129,12 @@ const CondoDetails = () => {
 
           <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 bg-input-bg p-2">
             <p>Balcony</p>
-            <Checkbox checked={!balcony} onChange={handleBalconyChange} />
+            <Checkbox checked={!balcony} onChange={() => handleToggleChange(balcony, setBalcony, "balcony")} />
           </div>
 
           <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 bg-input-bg p-2">
             <p>Pets?</p>
-            <Checkbox checked={!pets} onChange={handlePetsChange} />
+            <Checkbox checked={!pets} onChange={() => handleToggleChange(pets, setPets, "pets")} />
           </div>
 
           <div className="flex justify-between items-center border-gray-400 border-2 border-b-0 bg-input-bg p-2">
