@@ -35,11 +35,13 @@ const AddDetails = () => {
     <>
       <Navbar currentPage="add-details" />
       <div className="flex flex-col py-2 px-8 absolute mt-16 w-full">
+      <h2 className="text-lg font-[600] mb-2">Condo Details</h2>
         <form onSubmit={handleSubmit} className="flex flex-col w-full">
+          
           <div className="flex flex-col mb-4">
             <h2>Select Building:</h2>
             <button
-              className="flex justify-between items-center w-full bg-button border-2 p-3 rounded-md text-white"
+              className="flex justify-between items-center w-full bg-input-bg border-grey-400 border-2 p-3 text-black"
               type="button"
               onClick={openDrawerRight}
             >
@@ -50,7 +52,7 @@ const AddDetails = () => {
           <div className="flex flex-col mb-4">
             <label for="unit_number">Add Unit Number:</label>
             <input
-              className="border-gray-400 border-2 h-12 px-2 rounded-md bg-input-bg"
+              className="border-gray-300 border-2 h-12 px-2 bg-input-bg"
               type="text"
               id="unitNumber"
               name="unitNumber"
@@ -63,7 +65,7 @@ const AddDetails = () => {
           <div className="flex flex-col mb-4">
             <label for="squareFootage">Approximate Square Footage:</label>
             <input
-              className="border-gray-400 border-2 h-12 px-2 rounded-md bg-input-bg"
+              className="border-gray-300 border-2 h-12 px-2 bg-input-bg"
               type="text"
               id="squareFootage"
               name="squareFootage"
