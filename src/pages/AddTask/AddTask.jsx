@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { setHours, setMinutes } from "date-fns";
 import Footer from "../../components/Footer/Footer";
+import { Checkbox, Switch } from "@material-tailwind/react";
 
 const AddTask = () => {
   const [startDate, setStartDate] = useState(
@@ -14,14 +15,27 @@ const AddTask = () => {
     setHours(setMinutes(new Date(), 30), 16)
   );
 
+  const [monday, setMonday] = useState(true);
+  const [tuesday, setTuesday] = useState(true);
+  const [wednesday, setWednesday] = useState(true);
+  const [thursday, setThursday] = useState(true);
+  const [friday, setFriday] = useState(true);
+  const [saturday, setSaturday] = useState(true);
+  const [sunday, setSunday] = useState(true);
+
+  const handleToggleChange = (state, setState, label) => {
+    setState(!state);
+    console.log(state, label, "state");
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar currentPage="add-task"/>
       <div className="flex flex-col py-2 px-8 absolute mt-16 w-full">
-        <h2 className="font-bold text-xl">Add Task</h2>
+        <h2 className="font-bold text-2xl">Add Task</h2>
 
         <div className="flex flex-col mt-4">
-          <select className="border-black border-2 p-4" name="cars" id="cars">
+          <select className="border-gray-500 rounded-md border-2 p-4" name="cars" id="cars">
             <option disabled value="default">
               Select a task
             </option>
@@ -31,88 +45,69 @@ const AddTask = () => {
           </select>
         </div>
 
-        <div className="flex justify-between mt-5">
-          <h3 className="font-bold">Scheduled Cleaning</h3>
-          <label class="inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer" />
-            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-          </label>
-        </div>
-
-        <div className="flex justify-between my-4">
-          <h3 className="font-bold">Start Time</h3>
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            showTimeSelect
-            excludeTimes={[
-              setHours(setMinutes(new Date(), 0), 17),
-              setHours(setMinutes(new Date(), 30), 18),
-              setHours(setMinutes(new Date(), 30), 19),
-              setHours(setMinutes(new Date(), 30), 17),
-            ]}
-            dateFormat="MMMM d, yyyy h:mm aa"
-          />
-        </div>
-
-        <div className="flex justify-between my-4">
-          <h3 className="font-bold">End Time</h3>
-          <DatePicker
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            showTimeSelect
-            excludeTimes={[
-              setHours(setMinutes(new Date(), 0), 17),
-              setHours(setMinutes(new Date(), 30), 18),
-              setHours(setMinutes(new Date(), 30), 19),
-              setHours(setMinutes(new Date(), 30), 17),
-            ]}
-            dateFormat="MMMM d, yyyy h:mm aa"
-          />
-        </div>
-
-        <div className="flex justify-between mt-5">
-          <h3 className="font-bold">Repeat Scheduled</h3>
-          <label class="inline-flex items-center cursor-pointer">
-            <input type="checkbox" value="" class="sr-only peer" />
-            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-          </label>
-        </div>
-
-        <div className="flex flex-col mt-4 gap-2">
-          <h3 className="font-bold">Task Tags:</h3>
-          <div className="flex flex-wrap justify-between gap-2">
-            <div class="text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full w-[80px]">
-              Cleaning
+        <div className="flex flex-col justify-between mt-5">
+          <h3 className="font-bold text-lg">Select Days:</h3>
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4 rounded-t-md bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Monday</p>
             </div>
+            <Switch checked={!monday} onChange={() => handleToggleChange(monday, setMonday, "monday")} />
+          </div>
 
-            <div class=" text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 bg-green-200 text-green-700 rounded-full w-[80px]">
-              Personal
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Tuesday</p>
             </div>
+            <Switch checked={!tuesday} onChange={() => handleToggleChange(tuesday, setTuesday, "tuesday")} />
+          </div>
 
-            <div class=" text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 bg-orange-200 text-orange-700 rounded-full w-[80px]">
-              Family
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Wednesday</p>
             </div>
+            <Switch checked={!wednesday} onChange={() => handleToggleChange(wednesday, setWednesday, "wednesday")} />
+          </div>
 
-            <div class=" text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 bg-red-200 text-red-700 rounded-full w-[80px]">
-              Social
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Thursday</p>
             </div>
+            <Switch checked={!thursday} onChange={() => handleToggleChange(thursday, setThursday, "thursday")} />
+          </div>
 
-            <div class=" text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border w-[80px]">
-              Work
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Friday</p>
             </div>
+            <Switch checked={!friday} onChange={() => handleToggleChange(friday, setFriday, "friday")} />
+          </div>
 
-            <div class=" text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border w-[80px]">
-              Health
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Saturday</p>
             </div>
+            <Switch checked={!saturday} onChange={() => handleToggleChange(saturday, setSaturday, "saturday")} />
+          </div>
 
-            <div class=" text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border w-[80px]">
-              Travel
+          <div
+            className="flex justify-between items-center border-2 border-gray-500 p-4 rounded-b-md bg-input-bg"
+          >
+            <div className="flex items-center">
+              <p className="text-lg">Sunday</p>
             </div>
-
-            <div class="text-xs inline-flex justify-center items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full w-[80px]">
-              Special
-            </div>
+            <Switch checked={!sunday} onChange={() => handleToggleChange(sunday, setSunday, "sunday")} />
           </div>
         </div>
 
@@ -122,7 +117,7 @@ const AddTask = () => {
           </label>
 
           <textarea
-            className="border-black border-2 p-2 w-full"
+            className="border-gray-500 border-2 rounded-md p-2 w-full"
             id="w3review"
             name="w3review"
             rows="4"
