@@ -7,6 +7,7 @@ import AddTask from "./pages/AddTask/AddTask";
 import AddDetails from "./pages/AddDetails/AddDetails";
 import CondoDetails from "./pages/CondoDetails/CondoDetails";
 import Home from "./pages/Home/Home";
+import TodayTasks from "./pages/TodayTasks/TodayTasks";
 
 function App() {
   return (
@@ -21,9 +22,7 @@ function App() {
           <Route path="/add-task" element={<AddTask />} />
           <Route path="/add-details" element={<AddDetails />} />
           <Route path="/condo-details" element={<CondoDetails />} />
-          {/* 
-          
-          <Route path="/merchandise" element={<Merchandise />} /> */}
+          <Route path="/today's-tasks" element={<TodayTasks />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
