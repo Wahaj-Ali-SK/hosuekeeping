@@ -45,7 +45,7 @@ const AddTask = () => {
           </select>
         </div>
 
-        <div className="flex flex-col justify-between mt-5">
+        <div className="flex flex-col justify-between mt-5 gap-1">
           <h3 className="font-bold text-lg">Select Days:</h3>
           <div
             className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
