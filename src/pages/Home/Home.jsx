@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import { TiTick } from "react-icons/ti";
 import taskbg from '../../assets/images/task bg.jpg'
 import { FaAngleRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -27,7 +28,11 @@ const Home = () => {
         </div>
 
         <div className='mt-4'>
-          <h3 className='text-lg font-[500] mb-2'>Today's tasks</h3>
+          <div className='flex justify-between mb-2'>
+            <h3 className='text-lg font-[500] '>Today's tasks</h3>
+            <Link className='underline' to="/today's-tasks">See All</Link>
+          </div>
+
           <Swiper
             spaceBetween={10}
             slidesPerView={2}
