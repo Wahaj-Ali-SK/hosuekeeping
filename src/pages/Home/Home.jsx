@@ -43,8 +43,8 @@ const Home = () => {
             className='h-[150px]'
           >
             <SwiperSlide>
-              <div className='flex relative h-[120px] rounded-2xl bg-gray-800'>
-                <img className='absolute h-full w-full  opacity-70 rounded-2xl' src={taskbg} alt="" />
+              <div className='flex relative h-[120px]  bg-gray-800'>
+                <img className='absolute h-full w-full  opacity-70 ' src={taskbg} alt="" />
                 <div className='relative h-[fit-content] top-[50%] pl-2'>
                   <h3 className='text-white font-[600] w-[90%]'>Kitechen cleaning</h3>
                 </div>
@@ -57,8 +57,8 @@ const Home = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className='flex relative h-[120px] rounded-2xl bg-gray-800'>
-                <img className='absolute h-full w-full  opacity-70 rounded-2xl' src={taskbg} alt="" />
+              <div className='flex relative h-[120px] bg-gray-800'>
+                <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
                 <div className='relative h-[fit-content] top-[50%] pl-2'>
                   <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
                 </div>
@@ -67,8 +67,8 @@ const Home = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide><div className='flex relative h-[120px] rounded-2xl bg-gray-800'>
-              <img className='absolute h-full w-full  opacity-70 rounded-2xl' src={taskbg} alt="" />
+            <SwiperSlide><div className='flex relative h-[120px] bg-gray-800'>
+              <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
               <div className='relative h-[fit-content] top-[50%] pl-2'>
                 <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
               </div>
@@ -76,8 +76,8 @@ const Home = () => {
                 <TiTick size={28} color='lightseagreen' />
               </div>
             </div></SwiperSlide>
-            <SwiperSlide><div className='flex relative h-[120px] rounded-2xl bg-gray-800'>
-              <img className='absolute h-full w-full  opacity-70 rounded-2xl' src={taskbg} alt="" />
+            <SwiperSlide><div className='flex relative h-[120px] bg-gray-800'>
+              <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
               <div className='relative h-[fit-content] top-[50%] pl-2'>
                 <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
               </div>
@@ -104,7 +104,7 @@ const Home = () => {
               <SwiperSlide>
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full rounded-2xl' src={taskbg} alt="" />
+                    <img className='h-full w-full' src={taskbg} alt="" />
                   </div>
                   <div>
                     <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
@@ -115,7 +115,7 @@ const Home = () => {
               <SwiperSlide>
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full rounded-2xl' src={taskbg} alt="" />
+                    <img className='h-full w-full' src={taskbg} alt="" />
                   </div>
                   <div>
                     <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
@@ -125,7 +125,7 @@ const Home = () => {
               <SwiperSlide>
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full rounded-2xl' src={taskbg} alt="" />
+                    <img className='h-full w-full' src={taskbg} alt="" />
                   </div>
                   <div>
                     <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
@@ -135,7 +135,7 @@ const Home = () => {
               <SwiperSlide>
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full rounded-2xl' src={taskbg} alt="" />
+                    <img className='h-full w-full' src={taskbg} alt="" />
                   </div>
                   <div>
                     <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
@@ -146,7 +146,7 @@ const Home = () => {
               <SwiperSlide>
                 <div className='flex flex-col items-center justify-center'>
                   <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full rounded-2xl' src={taskbg} alt="" />
+                    <img className='h-full w-full' src={taskbg} alt="" />
                   </div>
                   <div>
                     <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
