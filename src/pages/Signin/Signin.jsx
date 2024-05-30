@@ -23,7 +23,7 @@ const Signin = () => {
           <div className="flex flex-col mb-4">
             <label for="email">Email:</label>
             <input
-              className="border-gray-400 border-2 h-12 px-2 rounded-md bg-input-bg"
+              className="border-gray-300 border-2 h-12 px-2 bg-input-bg"
               type="email"
               id="email"
               name="email"
@@ -32,9 +32,9 @@ const Signin = () => {
           </div>
           <div className="flex flex-col mb-4">
             <label htmlFor="password">Password:</label>
-            <div className="flex border-gray-400 border-2 items-center justify-between bg-input-bg rounded-md">
+            <div className="flex border-gray-300 border-2 items-center justify-between bg-input-bg">
               <input
-                className="h-12 w-full bg-input-bg px-2 rounded-md"
+                className="h-12 w-full bg-input-bg px-2"
                 type={showPassword ? "text" : "password"}
                 id="password"
                 name="password"
@@ -62,11 +62,11 @@ const Signin = () => {
         </div>
 
         <div className="flex flex-col w-full gap-5">
-          <button className="flex bg-white text-zinc-500 p-1 items-center justify-center gap-4 border-slate-300 border-2 rounded-md text-lg font-[600]">
+          <button className="flex bg-white text-zinc-500 p-1 items-center justify-center gap-4 border-slate-300 border-2 text-lg font-[600]">
             <img src={google} alt="google" className="w-[35px]"/>
             Continue with Google
           </button>
-          <button className="flex bg-white text-zinc-500	 p-1 items-center justify-center gap-4 border-slate-300 border-2 rounded-md text-lg font-[600]">
+          <button className="flex bg-white text-zinc-500	 p-1 items-center justify-center gap-4 border-slate-300 border-2 text-lg font-[600]">
             <img src={fb} alt="google" className="w-[35px]"/>
             Continue with Facebook
           </button>
