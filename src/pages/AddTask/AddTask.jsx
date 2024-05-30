@@ -35,7 +35,7 @@ const AddTask = () => {
         <h2 className="font-bold text-2xl">Add Task</h2>
 
         <div className="flex flex-col mt-4">
-          <select className="border-gray-500 rounded-md border-2 p-4" name="cars" id="cars">
+          <select className="border-gray-300 border-2 p-4" name="cars" id="cars">
             <option disabled value="default">
               Select a task
             </option>
@@ -48,7 +48,7 @@ const AddTask = () => {
         <div className="flex flex-col justify-between mt-5">
           <h3 className="font-bold text-lg">Select Days:</h3>
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4 rounded-t-md bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Monday</p>
@@ -57,7 +57,7 @@ const AddTask = () => {
           </div>
 
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Tuesday</p>
@@ -66,7 +66,7 @@ const AddTask = () => {
           </div>
 
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Wednesday</p>
@@ -75,7 +75,7 @@ const AddTask = () => {
           </div>
 
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Thursday</p>
@@ -84,7 +84,7 @@ const AddTask = () => {
           </div>
 
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Friday</p>
@@ -93,7 +93,7 @@ const AddTask = () => {
           </div>
 
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4  bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Saturday</p>
@@ -102,7 +102,7 @@ const AddTask = () => {
           </div>
 
           <div
-            className="flex justify-between items-center border-2 border-gray-500 p-4 rounded-b-md bg-input-bg"
+            className="flex justify-between items-center border-2 border-gray-300 p-4 bg-input-bg"
           >
             <div className="flex items-center">
               <p className="text-lg">Sunday</p>
