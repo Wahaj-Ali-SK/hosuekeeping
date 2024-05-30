@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar currentPage='home' />
+      <Navbar currentPage="home" />
       <div className='bg-gradient-to-r from-blue-300 to-indigo-200 w-full h-[100px] absolute mt-16 px-4 flex justify-center items-center text-center'>
         <h2 className='text-2xl mt-2 font-[600] text-gray-200'>Welcome back, User</h2>
       </div>
