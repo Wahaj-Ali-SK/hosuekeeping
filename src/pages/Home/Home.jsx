@@ -30,7 +30,7 @@ const Home = () => {
         <div className='mt-4'>
           <div className='flex justify-between mb-2'>
             <h3 className='text-lg font-[500] '>Today's tasks</h3>
-            <Link className='underline' to="/today's-tasks">See All</Link>
+            <Link className='underline' to="/scheduled-tasks">See All</Link>
           </div>
 
           <Swiper
