@@ -22,7 +22,7 @@ function App() {
           <Route path="/add-task" element={<AddTask />} />
           <Route path="/add-details" element={<AddDetails />} />
           <Route path="/condo-details" element={<CondoDetails />} />
-          <Route path="/today's-tasks" element={<TodayTasks />} />
+          <Route path="/scheduled-tasks" element={<TodayTasks />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
