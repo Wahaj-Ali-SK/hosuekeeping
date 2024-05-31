@@ -33,7 +33,7 @@ const Settings = () => {
 
         <div className="flex flex-col mt-4">
           <Link
-            to="/profile"
+            to="/scheduled-tasks"
             className="flex justify-between items-center border-2 border-grey-400 p-4 bg-input-bg"
           >
             <div className="flex items-center">
@@ -42,7 +42,7 @@ const Settings = () => {
             <FaChevronRight />
           </Link>
 
-          <Link
+          {/* <Link
             to="/profile"
             className="flex justify-between items-center border-2 border-grey-400 p-4 bg-input-bg"
           >
@@ -50,7 +50,7 @@ const Settings = () => {
               <h2 className="text-lg">My Condos</h2>
             </div>
             <FaChevronRight />
-          </Link>
+          </Link> */}
 
           <Link
             to="/profile"
