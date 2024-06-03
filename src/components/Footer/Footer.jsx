@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="flex justify-around items-center fixed bottom-0 w-full bg-button z-50 px-2 py-4 border-t-2 border-black text-white">
       <Link to='/'><IoHomeSharp size={22} color={currentPath === '/' ? activeColor : defaultColor}/></Link>
       <Link to="/add-task"><FaPlusCircle size={28} color={currentPath === '/add-task' ? activeColor : defaultColor}/></Link>
-      <MdDateRange size={22} />
+      <Link to="/calender"><MdDateRange size={28} color={currentPath === '/calender' ? activeColor : defaultColor} /></Link>
     </div>
   );
 };
