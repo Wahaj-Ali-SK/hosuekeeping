@@ -8,6 +8,7 @@ import AddDetails from "./pages/AddDetails/AddDetails";
 import CondoDetails from "./pages/CondoDetails/CondoDetails";
 import Home from "./pages/Home/Home";
 import TodayTasks from "./pages/TodayTasks/TodayTasks";
+import TaskScheduler from "./pages/TasksScheduler/TaskScheduler";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/add-details" element={<AddDetails />} />
           <Route path="/condo-details" element={<CondoDetails />} />
           <Route path="/scheduled-tasks" element={<TodayTasks />} />
+          <Route path="/calender" element={<TaskScheduler />} />
         </Routes>
         {/* <Footer /> */}
       </Router>
