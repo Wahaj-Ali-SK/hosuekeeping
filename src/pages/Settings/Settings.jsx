@@ -19,7 +19,7 @@ const Settings = () => {
 
       <div className="flex flex-col py-2 px-8 absolute mt-[100px] w-full">
         <Link
-          to="/profile"
+          to="/add-details"
           className="flex justify-between items-center border-2 border-grey-400 p-4 bg-input-bg"
         >
           <div className="flex gap-2 items-center">
