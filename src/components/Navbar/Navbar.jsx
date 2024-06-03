@@ -14,7 +14,7 @@ const Navbar = ({ currentPage }) => {
             </Link>
           )}
           {currentPage === "settings" && (
-            <Link to="/signup" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <IoMdArrowRoundBack size={25} color="#ffe4c4" />
             </Link>
           )}
