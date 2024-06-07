@@ -10,6 +10,7 @@ const Settings = () => {
   const navigate = useNavigate();
 
   const handleSignOut = () => {
+    localStorage.clear();
     navigate("/login");
   };
 
