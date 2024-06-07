@@ -10,16 +10,19 @@ import { TiTick } from "react-icons/ti";
 import taskbg from '../../assets/images/task bg.jpg'
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
 
   const [taskCompleted, setTaskCompleted] = useState(false);
+  const user = useSelector(state => state.user.user.user);
+  // console.log(user,'logged in user');
 
   return (
     <>
       <Navbar currentPage="home" />
       <div className='bg-gradient-to-r from-[#858b8f] to-[#000000] w-full h-[100px] absolute mt-16 px-4 flex justify-center items-center text-center'>
-        <h2 className='text-2xl mt-2 font-[600] text-gray-200'>Welcome back, <span className='text-[#ffe4c4]'>User</span></h2>
+        <h2 className='text-2xl mt-2 font-[600] text-gray-200'>Welcome back, <span className='text-[#ffe4c4]'>{user.username}</span></h2>
       </div>
       <div className='flex flex-col py-2 px-8 absolute mt-[180px] w-full'>
 
