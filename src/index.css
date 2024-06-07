@@ -9,6 +9,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.swiper-wrapper {
+    justify-content: center;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
     color: #000 !important;
