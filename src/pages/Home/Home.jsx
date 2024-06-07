@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,13 +10,48 @@ import { TiTick } from "react-icons/ti";
 import taskbg from '../../assets/images/task bg.jpg'
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { userDetails } from '../../Store/UserSlicer';
+
+const getCurrentDayIndex = () => {
+  const currentDate = new Date();
+  return currentDate.getDay();
+};
 
 const Home = () => {
 
-  const [taskCompleted, setTaskCompleted] = useState(false);
   const user = useSelector(state => state.user.user.user);
-  // console.log(user,'logged in user');
+  const userRole = useSelector(state => state.user.userRole);
+  const condoTasks = useSelector(state => state.user.userTasks);
+  const [filteredTasks, setFilteredTasks] = useState([]);
+  const dispatch = useDispatch();
+  console.log(condoTasks, 'condo tasks');
+
+  useEffect(() => {
+    const currentDayIndex = getCurrentDayIndex();
+    console.log(currentDayIndex, 'current date');
+
+    const filtered = condoTasks.filter(task => {
+      const { schedule } = task;
+
+      if (schedule) {
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const currentDay = daysOfWeek[currentDayIndex];
+
+        if (schedule[currentDay] !== undefined) {
+          return schedule[currentDay];
+        }
+      }
+
+      return false;
+    });
+
+    setFilteredTasks(filtered);
+  }, [condoTasks]);
+
+  useEffect(() => {
+    dispatch(userDetails());
+  }, []);
 
   return (
     <>
@@ -45,7 +80,7 @@ const Home = () => {
             onSwiper={(swiper) => console.log(swiper)}
             className='h-[150px]'
           >
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <div className='flex relative h-[120px]  bg-gray-800'>
                 <img className='absolute h-full w-full  opacity-70 ' src={taskbg} alt="" />
                 <div className='relative h-[fit-content] top-[50%] pl-2'>
@@ -70,30 +105,49 @@ const Home = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide><div className='flex relative h-[120px] bg-gray-800'>
-              <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
-              <div className='relative h-[fit-content] top-[50%] pl-2'>
-                <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
+            <SwiperSlide>
+              <div className='flex relative h-[120px] bg-gray-800'>
+                <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
+                <div className='relative h-[fit-content] top-[50%] pl-2'>
+                  <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
+                </div>
+                <div className='relative right-1 top-1 h-[fit-content]'>
+                  <TiTick size={28} color='lightseagreen' />
+                </div>
               </div>
-              <div className='relative right-1 top-1 h-[fit-content]'>
-                <TiTick size={28} color='lightseagreen' />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className='flex relative h-[120px] bg-gray-800'>
+                <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
+                <div className='relative h-[fit-content] top-[50%] pl-2'>
+                  <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
+                </div>
+                <div className='relative right-1 top-1 h-[fit-content]'>
+                  <TiTick size={28} color='lightseagreen' />
+                </div>
               </div>
-            </div></SwiperSlide>
-            <SwiperSlide><div className='flex relative h-[120px] bg-gray-800'>
-              <img className='absolute h-full w-full  opacity-70' src={taskbg} alt="" />
-              <div className='relative h-[fit-content] top-[50%] pl-2'>
-                <h3 className='text-white font-[600] w-[90%]'>Living Room Dusting</h3>
-              </div>
-              <div className='relative right-1 top-1 h-[fit-content]'>
-                <TiTick size={28} color='lightseagreen' />
-              </div>
-            </div></SwiperSlide>
+            </SwiperSlide> */}
+            {filteredTasks.map((task, index) => (
+              <SwiperSlide key={index}>
+                <div className='flex relative h-[120px] bg-gray-800'>
+                  <img className='absolute h-full w-full opacity-70' src={taskbg} alt="" />
+                  <div className='relative h-[fit-content] top-[50%] w-full pl-2'>
+                    <h3 className='text-white font-[600] w-[90%]'>{task.name}</h3>
+                  </div>
+                  {task.isCompleted && (
+                    <div className='relative right-1 top-1 h-[fit-content]'>
+                      <TiTick size={28} color='lightseagreen' />
+                    </div>
+                  )}
+                </div>
+              </SwiperSlide>
+            ))}
             <div></div>
           </Swiper>
         </div>
 
-        <div className='flex flex-col mt-2'>
-          <h3 className='text-lg font-[500] mb-2'>Add Task</h3>
+        {userRole.name != 'Housekeeper' && <div className='flex flex-col mt-2'>
+          <h3 className='text-lg font-[500] mb-2'>Modify Task</h3>
 
           <div>
             <Swiper
@@ -104,62 +158,21 @@ const Home = () => {
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>
-                <div className='flex flex-col items-center justify-center'>
-                  <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full' src={taskbg} alt="" />
+              {condoTasks.map((task, index) => (
+                <SwiperSlide key={index}>
+                  <div className='flex flex-col items-center justify-center'>
+                    <div className='flex h-[60px] w-[60px] '>
+                      <img className='h-full w-full' src={taskbg} alt="" />
+                    </div>
+                    <div>
+                      <h3 className='text-black font-[600] text-center mt-2'>{task.name}</h3>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
-                  </div>
-                </div>
-
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center justify-center'>
-                  <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full' src={taskbg} alt="" />
-                  </div>
-                  <div>
-                    <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center justify-center'>
-                  <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full' src={taskbg} alt="" />
-                  </div>
-                  <div>
-                    <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='flex flex-col items-center justify-center'>
-                  <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full' src={taskbg} alt="" />
-                  </div>
-                  <div>
-                    <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className='flex flex-col items-center justify-center'>
-                  <div className='flex h-[60px] w-[60px] '>
-                    <img className='h-full w-full' src={taskbg} alt="" />
-                  </div>
-                  <div>
-                    <h3 className='text-black font-[600] text-center mt-2'>Dusting</h3>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
-
-        </div>
+        </div>}
       </div>
       <Footer />
     </>
