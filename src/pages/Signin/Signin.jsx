@@ -5,7 +5,7 @@ import fb from "../../assets/icons/facebook.svg";
 import logo from '../../assets/icons/logo.png'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { loginUser } from "../../Store/UserSlicer";
+import { loginUser, userDetails } from "../../Store/UserSlicer";
 
 const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,6 +24,7 @@ const Signin = () => {
         setIdentifier('');
         setPassword('');
         navigate('/');
+        dispatch(userDetails());
       }
     });
   }
